@@ -1,4 +1,6 @@
 package BinaryConverter;
+import java.util.*;
+import java.util.Scanner;
 
 public class Converter {
 	public static String decToBi(long dec) {
@@ -20,8 +22,13 @@ public class Converter {
 		return decimal+"";
 	}
 	public static void main(String [] args) {
-		System.out.println(decToBi(100000000000));
-		System.out.println(biToDec("111011100110101100101000000000"));
+		Scanner input = new Scanner (System.in);
+		System.out.println("Enter a number to convert from decimal to binary: ");
+		String numOne = input.nextLine();
+		System.out.println("Enter a number to convert from binary to decimal");
+		String numTwo = input.nextLine();
+		System.out.println("Your decimal number in binary is: " + decToBi(Long.parseLong(numOne)));
+		System.out.println("Your binary number in decimal is: " + biToDec(numTwo));
 	}
 }
 
